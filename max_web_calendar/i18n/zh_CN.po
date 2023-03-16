@@ -1,0 +1,31 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* max_web_calendar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-04 02:11+0000\n"
+"PO-Revision-Date: 2016-11-04 02:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: max_web_calendar
+#. openerp-web
+#: code:addons/max_web_calendar/static/src/js/max_web_calendar.js:86
+#, python-format
+msgid "false"
+msgstr "否"
+
+#. module: max_web_calendar
+#. openerp-web
+#: code:addons/max_web_calendar/static/src/js/max_web_calendar.js:86
+#, python-format
+msgid "true"
+msgstr "是"
+

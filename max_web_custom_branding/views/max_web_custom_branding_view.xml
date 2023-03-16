@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="menu_secondary" inherit_id="web.menu_secondary" priority="32">
+        <xpath expr="//div[@class='o_sub_menu_footer']" position="replace">
+            <div class="o_sub_menu_footer">
+                <span>
+                    Supported by <a target="_new" t-att-href="request.env['ir.config_parameter'].get_param('max_web_custom_branding.company_url')"
+                    t-att-style="'color: ' + request.env['ir.config_parameter'].get_param('max_web_custom_branding.company_name_color')">
+                    <t t-esc="request.env['ir.config_parameter'].get_param('max_web_custom_branding.company_name')" /></a>
+                </span>
+                <div t-if="request.env['ir.config_parameter'].get_param('max_web_custom_branding.release_version')">
+                    Version <t t-esc="request.env['ir.config_parameter'].get_param('max_web_custom_branding.release_version')" />
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="assets_backend" name="max_web_debug_menu assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/max_web_custom_branding/static/src/js/max_web_custom_branding.js"></script>
+        </xpath>
+    </template>
+
+    <template id="layout_footer_copyright" inherit_id="website.layout_footer_copyright" name="Remove footer Odoo link" priority="20">
+        <xpath expr="//div[@class='pull-left text-muted']" position="replace">
+            <div class="pull-left text-muted">
+                <span>
+                    Supported by <a target="_new" t-att-href="request.env['ir.config_parameter'].get_param('max_web_custom_branding.company_url')"
+                    t-att-style="'color: ' + request.env['ir.config_parameter'].get_param('max_web_custom_branding.company_name_color')">
+                    <t t-esc="request.env['ir.config_parameter'].get_param('max_web_custom_branding.company_name')" /></a>
+                </span>
+            </div>
+        </xpath>
+        <xpath expr="//div[@class='pull-right']" position="replace">
+            <div class="pull-right">
+                <div t-if="request.env['ir.config_parameter'].get_param('max_web_custom_branding.release_version')">
+                    Version <t t-esc="request.env['ir.config_parameter'].get_param('max_web_custom_branding.release_version')" />
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
